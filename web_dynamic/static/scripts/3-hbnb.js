@@ -32,9 +32,9 @@ $(document).ready(function() {
 	    <div class="price_by_night">$${ place.price_by_night }</div>
 	  </div>
 	  <div class="information">
-	    <div class="max_guest">${ place.max_guest } Guest${ if place.max_guest != 1 }s${ endif }</div>
-            <div class="number_rooms">${ place.number_rooms } Bedroom${ if place.number_rooms != 1 }s${ endif }</div>
-            <div class="number_bathrooms">${ place.number_bathrooms } Bathroom${ if place.number_bathrooms != 1 }s${ endif }</div>
+	    <div class="max_guest">${ place.max_guest } Guest${ place.max_guest !=1 ? "s" : ""}</div>
+            <div class="number_rooms">${ place.number_rooms } Bedroom${ place.number_rooms !=1 ? "s" : ""}</div>
+            <div class="number_bathrooms">${ place.number_bathrooms } Bathroom${ place.number_bathrooms !=1 ? "s" : ""}</div>
 	  </div>
 	  <div class="user">
             <b>Owner:</b> ${ place.user.first_name } ${ place.user.last_name }
